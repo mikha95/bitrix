@@ -2,24 +2,9 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Skillogram");
 ?>
-<h1>Skillogram</h1>
+<h1>Главная страница</h1>
 
-<?php
-$APPLICATION->IncludeComponent("bitrix:menu",".default",[
-    "ROOT_MENU_TYPE" => "top",
-    "MAX_LEVEL" => "1",
-    "CHILD_MENU_TYPE" => "top",
-    "USE_EXT" => "Y",
-    "DELAY" => "N",
-    "ALLOW_MULTI_SELECT" => "Y",
-    "MENU_CACHE_TYPE" => "N",
-    "MENU_CACHE_TIME" => "3600",
-    "MENU_CACHE_USE_GROUPS" => "Y",
-    "MENU_CACHE_GET_VARS" => ""
-    ])
-?>
-
-<?$APPLICATION->IncludeComponent("bitrix:news.list","",Array(
+<?$APPLICATION->IncludeComponent("bitrix:news.list","",[
         "DISPLAY_DATE" => "Y",
         "DISPLAY_NAME" => "Y",
         "DISPLAY_PICTURE" => "Y",
@@ -54,7 +39,7 @@ $APPLICATION->IncludeComponent("bitrix:menu",".default",[
         "CACHE_TIME" => "3600",
         "CACHE_FILTER" => "Y",
         "CACHE_GROUPS" => "Y",
-        "DISPLAY_TOP_PAGER" => "Y",
+        "DISPLAY_TOP_PAGER" => "N",
         "DISPLAY_BOTTOM_PAGER" => "Y",
         "PAGER_TITLE" => "Новости",
         "PAGER_SHOW_ALWAYS" => "Y",
@@ -72,7 +57,7 @@ $APPLICATION->IncludeComponent("bitrix:menu",".default",[
         "AJAX_OPTION_STYLE" => "Y",
         "AJAX_OPTION_HISTORY" => "N",
         "AJAX_OPTION_ADDITIONAL" => ""
-    )
+    ]
 );?>
 
 <?$APPLICATION->IncludeComponent("bitrix:furniture.catalog.index", "", array(
@@ -86,3 +71,5 @@ $APPLICATION->IncludeComponent("bitrix:menu",".default",[
 	false
 );?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
+
