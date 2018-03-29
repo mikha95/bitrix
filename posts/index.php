@@ -1,8 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Посты");
+
 ?>
 <h1>Страница постов</h1>
+
 
 <?$APPLICATION->IncludeComponent("bitrix:news.list","posts",[
         "DISPLAY_DATE" => "Y",

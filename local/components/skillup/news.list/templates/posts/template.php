@@ -1,4 +1,7 @@
-<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<?php
+var_dump($arResult);
+
+
 
 ?>
 <div class="container">
@@ -11,6 +14,7 @@
                 <img src="<?= $aItem['DETAIL_PICTURE']['src']; ?>">
                 </a>
                 <div><?= $aItem['AUTHOR'] ?></div>
+                <div><?= $aItem['PROPERTY_LIKES'] ?></div>
             </div>
         </div>
         <? endforeach; ?>
